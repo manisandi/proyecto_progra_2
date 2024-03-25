@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="fondo">
+    <file>imagen-llamativa-cintas-sobre-fondo-oscuro-generacion-ai_724548-22165.jpg</file>
+    <file>pngtree-trendy-3d-80s-abstract-background-cool-design-picture-image_1157552.jpg</file>
+    <file>d65d5cdabfa238c5d784b600a68ca314.jpg</file>
+  </qresource>
+  <qresource prefix="prefijoNuevo"/>
+  <qresource prefix="prefijoNuevo">
+    <file>perfil-del-usuario.png</file>
+  </qresource>
+  <qresource prefix="prefijoNuevo">
+    <file>cerrar-con-llave.png</file>
+  </qresource>
+</RCC>
