@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>MenuPrincipal</class>
+ <widget class="QMainWindow" name="MenuPrincipal">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>810</width>
+    <width>852</width>
     <height>578</height>
    </rect>
   </property>
@@ -14,14 +14,35 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="frame">
+   <widget class="QFrame" name="frmPrincipal">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>801</width>
-      <height>561</height>
+      <x>210</x>
+      <y>10</y>
+      <width>631</width>
+      <height>551</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>631</width>
+      <height>600</height>
+     </size>
     </property>
     <property name="styleSheet">
      <string notr="true">background-image: url(:/fondo/imagen-llamativa-cintas-sobre-fondo-oscuro-generacion-ai_724548-22165.jpg);</string>
@@ -32,17 +53,19 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QFrame" name="frame_2">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>20</y>
-       <width>191</width>
-       <height>521</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton{
+   </widget>
+   <widget class="QFrame" name="frmControles">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>191</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	
 border-radius:10px;
 font:12pt&quot;Arial&quot;;
 color:rgb(255,255,254);
@@ -56,201 +79,186 @@ border:2px solid rgb(120,0,171);
   background-color: rgb(170, 85, 0);
 }
 
-</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <widget class="QPushButton" name="pushButton">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>30</y>
-        <width>141</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
-font: 14pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 85, 0);</string>
-      </property>
-      <property name="text">
-       <string>Usuarios</string>
-      </property>
-      <property name="icon">
-       <iconset resource="recursos/image.qrc">
-        <normaloff>:/prefijoNuevo/perfil-del-usuario.png</normaloff>:/prefijoNuevo/perfil-del-usuario.png</iconset>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>90</y>
-        <width>141</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 85, 0);</string>
-      </property>
-      <property name="text">
-       <string>Empleados</string>
-      </property>
-      <property name="icon">
-       <iconset resource="recursos/image.qrc">
-        <normaloff>:/prefijoNuevo/perfil-del-usuario.png</normaloff>:/prefijoNuevo/perfil-del-usuario.png</iconset>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_4">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>160</y>
-        <width>141</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 85, 0);
-font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Departamentos</string>
-      </property>
-      <property name="icon">
-       <iconset resource="recursos/image.qrc">
-        <normaloff>:/fondo/departamento (1).png</normaloff>:/fondo/departamento (1).png</iconset>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_5">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>220</y>
-        <width>141</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 85, 0);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
-font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Bienes</string>
-      </property>
-      <property name="icon">
-       <iconset resource="recursos/image.qrc">
-        <normaloff>:/fondo/departamento (1).png</normaloff>:/fondo/departamento (1).png</iconset>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_7">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>280</y>
-        <width>141</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 85, 0);</string>
-      </property>
-      <property name="text">
-       <string>Asignacion Bienes</string>
-      </property>
-      <property name="icon">
-       <iconset resource="recursos/image.qrc">
-        <normaloff>:/fondo/departamento (1).png</normaloff>:/fondo/departamento (1).png</iconset>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_8">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>462</y>
-        <width>141</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 85, 0);
-font: 14pt &quot;MS Shell Dlg 2&quot;;
-font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Almacenamiento</string>
-      </property>
-      <property name="icon">
-       <iconset resource="recursos/image.qrc">
-        <normaloff>:/prefijoNuevo/cerrar-con-llave.png</normaloff>:/prefijoNuevo/cerrar-con-llave.png</iconset>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_6">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>400</y>
-        <width>141</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 85, 0);
-font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Reportes</string>
-      </property>
-      <property name="icon">
-       <iconset resource="recursos/image.qrc">
-        <normaloff>:/prefijoNuevo/cerrar-con-llave.png</normaloff>:/prefijoNuevo/cerrar-con-llave.png</iconset>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_3">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>342</y>
-        <width>141</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 85, 0);
-font: 11pt &quot;MS Shell Dlg 2&quot;;
-font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Desligar Bienes</string>
-      </property>
-      <property name="icon">
-       <iconset resource="recursos/image.qrc">
-        <normaloff>:/fondo/departamento (1).png</normaloff>:/fondo/departamento (1).png</iconset>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QFrame" name="frame_3">
+#frmControles{
+	background-image: url(:/fondo/imagen-llamativa-cintas-sobre-fondo-oscuro-generacion-ai_724548-22165.jpg);
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="btnUsuarios">
      <property name="geometry">
       <rect>
-       <x>230</x>
-       <y>50</y>
-       <width>551</width>
-       <height>471</height>
+       <x>20</x>
+       <y>30</y>
+       <width>141</width>
+       <height>41</height>
       </rect>
      </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 85, 0);</string>
      </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+     <property name="text">
+      <string>Usuarios</string>
+     </property>
+     <property name="icon">
+      <iconset resource="recursos/image.qrc">
+       <normaloff>:/prefijoNuevo/perfil-del-usuario.png</normaloff>:/prefijoNuevo/perfil-del-usuario.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnEmpleados">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>141</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 85, 0);</string>
+     </property>
+     <property name="text">
+      <string>Empleados</string>
+     </property>
+     <property name="icon">
+      <iconset resource="recursos/image.qrc">
+       <normaloff>:/prefijoNuevo/perfil-del-usuario.png</normaloff>:/prefijoNuevo/perfil-del-usuario.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnDepartamentos">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>160</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 85, 0);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Departamentos</string>
+     </property>
+     <property name="icon">
+      <iconset resource="recursos/image.qrc">
+       <normaloff>:/prefijoNuevo/perfil-del-usuario.png</normaloff>:/prefijoNuevo/perfil-del-usuario.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnBienes">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>220</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 85, 0);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Bienes</string>
+     </property>
+     <property name="icon">
+      <iconset resource="recursos/image.qrc">
+       <normaloff>:/prefijoNuevo/perfil-del-usuario.png</normaloff>:/prefijoNuevo/perfil-del-usuario.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnAsignacion">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>280</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 85, 0);</string>
+     </property>
+     <property name="text">
+      <string>Asignacion Bienes</string>
+     </property>
+     <property name="icon">
+      <iconset resource="recursos/image.qrc">
+       <normaloff>:/prefijoNuevo/perfil-del-usuario.png</normaloff>:/prefijoNuevo/perfil-del-usuario.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnAlmacenamiento">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>462</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 85, 0);
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Almacenamiento</string>
+     </property>
+     <property name="icon">
+      <iconset resource="recursos/image.qrc">
+       <normaloff>:/prefijoNuevo/cerrar-con-llave.png</normaloff>:/prefijoNuevo/cerrar-con-llave.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnReportes">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>400</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 85, 0);
+font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Reportes</string>
+     </property>
+     <property name="icon">
+      <iconset resource="recursos/image.qrc">
+       <normaloff>:/prefijoNuevo/cerrar-con-llave.png</normaloff>:/prefijoNuevo/cerrar-con-llave.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnDesligar">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>342</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 85, 0);
+font: 11pt &quot;MS Shell Dlg 2&quot;;
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Desligar Bienes</string>
+     </property>
+     <property name="icon">
+      <iconset resource="recursos/image.qrc">
+       <normaloff>:/prefijoNuevo/perfil-del-usuario.png</normaloff>:/prefijoNuevo/perfil-del-usuario.png</iconset>
      </property>
     </widget>
    </widget>
