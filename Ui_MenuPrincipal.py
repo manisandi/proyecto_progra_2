@@ -14,23 +14,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MenuPrincipal(object):
     def setupUi(self, MenuPrincipal):
         MenuPrincipal.setObjectName("MenuPrincipal")
-        MenuPrincipal.resize(852, 578)
+        MenuPrincipal.resize(847, 578)
+        MenuPrincipal.setStyleSheet("\n"
+"background-color: rgb(139, 69, 0);")
         self.centralwidget = QtWidgets.QWidget(MenuPrincipal)
         self.centralwidget.setObjectName("centralwidget")
-        self.frmPrincipal = QtWidgets.QFrame(self.centralwidget)
-        self.frmPrincipal.setEnabled(True)
-        self.frmPrincipal.setGeometry(QtCore.QRect(210, 10, 631, 551))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.frmPrincipal.sizePolicy().hasHeightForWidth())
-        self.frmPrincipal.setSizePolicy(sizePolicy)
-        self.frmPrincipal.setMinimumSize(QtCore.QSize(0, 0))
-        self.frmPrincipal.setMaximumSize(QtCore.QSize(631, 600))
-        self.frmPrincipal.setStyleSheet("background-image: url(:/fondo/imagen-llamativa-cintas-sobre-fondo-oscuro-generacion-ai_724548-22165.jpg);")
-        self.frmPrincipal.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frmPrincipal.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frmPrincipal.setObjectName("frmPrincipal")
         self.frmControles = QtWidgets.QFrame(self.centralwidget)
         self.frmControles.setGeometry(QtCore.QRect(10, 10, 191, 551))
         self.frmControles.setStyleSheet("QPushButton{\n"
@@ -110,9 +98,22 @@ class Ui_MenuPrincipal(object):
 "font: 12pt \"MS Shell Dlg 2\";")
         self.btnDesligar.setIcon(icon)
         self.btnDesligar.setObjectName("btnDesligar")
+        self.mdiArea = QtWidgets.QMdiArea(self.centralwidget)
+        self.mdiArea.setGeometry(QtCore.QRect(210, 20, 621, 541))
+        self.mdiArea.setObjectName("mdiArea")
+        self.subwindow = QtWidgets.QWidget()
+        self.subwindow.setObjectName("subwindow")
         MenuPrincipal.setCentralWidget(self.centralwidget)
+        self.mniUsuarios = QtWidgets.QAction(MenuPrincipal)
+        self.mniUsuarios.setCheckable(True)
+        self.mniUsuarios.setObjectName("mniUsuarios")
+        self.mniEmpleados = QtWidgets.QAction(MenuPrincipal)
+        self.mniEmpleados.setCheckable(True)
+        self.mniEmpleados.setObjectName("mniEmpleados")
 
         self.retranslateUi(MenuPrincipal)
+        self.btnUsuarios.clicked.connect(self.mdiArea.showFullScreen) # type: ignore
+        self.btnEmpleados.clicked.connect(self.mdiArea.showFullScreen) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MenuPrincipal)
 
     def retranslateUi(self, MenuPrincipal):
@@ -126,4 +127,9 @@ class Ui_MenuPrincipal(object):
         self.btnAlmacenamiento.setText(_translate("MenuPrincipal", "Almacenamiento"))
         self.btnReportes.setText(_translate("MenuPrincipal", "Reportes"))
         self.btnDesligar.setText(_translate("MenuPrincipal", "Desligar Bienes"))
-import image_rc
+        self.subwindow.setWindowTitle(_translate("MenuPrincipal", "Subwindow"))
+        self.mniUsuarios.setText(_translate("MenuPrincipal", "Usuarios"))
+        self.mniUsuarios.setToolTip(_translate("MenuPrincipal", "Usuarios"))
+        self.mniEmpleados.setText(_translate("MenuPrincipal", "Empleados"))
+        self.mniEmpleados.setToolTip(_translate("MenuPrincipal", "Emleados"))
+import images_rc

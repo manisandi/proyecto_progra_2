@@ -6,54 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>852</width>
+    <width>847</width>
     <height>578</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">
+background-color: rgb(139, 69, 0);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="frmPrincipal">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>10</y>
-      <width>631</width>
-      <height>551</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>0</width>
-      <height>0</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>631</width>
-      <height>600</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-image: url(:/fondo/imagen-llamativa-cintas-sobre-fondo-oscuro-generacion-ai_724548-22165.jpg);</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-   </widget>
    <widget class="QFrame" name="frmControles">
     <property name="geometry">
      <rect>
@@ -107,7 +71,7 @@ color: rgb(255, 85, 0);</string>
       <string>Usuarios</string>
      </property>
      <property name="icon">
-      <iconset resource="recursos/image.qrc">
+      <iconset resource="recursos/images.qrc">
        <normaloff>:/prefijoNuevo/perfil-del-usuario.png</normaloff>:/prefijoNuevo/perfil-del-usuario.png</iconset>
      </property>
     </widget>
@@ -128,7 +92,7 @@ color: rgb(255, 85, 0);</string>
       <string>Empleados</string>
      </property>
      <property name="icon">
-      <iconset resource="recursos/image.qrc">
+      <iconset resource="recursos/images.qrc">
        <normaloff>:/prefijoNuevo/perfil-del-usuario.png</normaloff>:/prefijoNuevo/perfil-del-usuario.png</iconset>
      </property>
     </widget>
@@ -149,7 +113,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <string>Departamentos</string>
      </property>
      <property name="icon">
-      <iconset resource="recursos/image.qrc">
+      <iconset resource="recursos/images.qrc">
        <normaloff>:/prefijoNuevo/perfil-del-usuario.png</normaloff>:/prefijoNuevo/perfil-del-usuario.png</iconset>
      </property>
     </widget>
@@ -171,7 +135,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
       <string>Bienes</string>
      </property>
      <property name="icon">
-      <iconset resource="recursos/image.qrc">
+      <iconset resource="recursos/images.qrc">
        <normaloff>:/prefijoNuevo/perfil-del-usuario.png</normaloff>:/prefijoNuevo/perfil-del-usuario.png</iconset>
      </property>
     </widget>
@@ -192,7 +156,7 @@ color: rgb(255, 85, 0);</string>
       <string>Asignacion Bienes</string>
      </property>
      <property name="icon">
-      <iconset resource="recursos/image.qrc">
+      <iconset resource="recursos/images.qrc">
        <normaloff>:/prefijoNuevo/perfil-del-usuario.png</normaloff>:/prefijoNuevo/perfil-del-usuario.png</iconset>
      </property>
     </widget>
@@ -214,7 +178,7 @@ font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
       <string>Almacenamiento</string>
      </property>
      <property name="icon">
-      <iconset resource="recursos/image.qrc">
+      <iconset resource="recursos/images.qrc">
        <normaloff>:/prefijoNuevo/cerrar-con-llave.png</normaloff>:/prefijoNuevo/cerrar-con-llave.png</iconset>
      </property>
     </widget>
@@ -235,7 +199,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
       <string>Reportes</string>
      </property>
      <property name="icon">
-      <iconset resource="recursos/image.qrc">
+      <iconset resource="recursos/images.qrc">
        <normaloff>:/prefijoNuevo/cerrar-con-llave.png</normaloff>:/prefijoNuevo/cerrar-con-llave.png</iconset>
      </property>
     </widget>
@@ -257,15 +221,85 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       <string>Desligar Bienes</string>
      </property>
      <property name="icon">
-      <iconset resource="recursos/image.qrc">
+      <iconset resource="recursos/images.qrc">
        <normaloff>:/prefijoNuevo/perfil-del-usuario.png</normaloff>:/prefijoNuevo/perfil-del-usuario.png</iconset>
      </property>
     </widget>
    </widget>
+   <widget class="QMdiArea" name="mdiArea">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>20</y>
+      <width>621</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="subwindow">
+     <property name="windowTitle">
+      <string>Subwindow</string>
+     </property>
+    </widget>
+   </widget>
   </widget>
+  <action name="mniUsuarios">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Usuarios</string>
+   </property>
+   <property name="toolTip">
+    <string>Usuarios</string>
+   </property>
+  </action>
+  <action name="mniEmpleados">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Empleados</string>
+   </property>
+   <property name="toolTip">
+    <string>Emleados</string>
+   </property>
+  </action>
  </widget>
  <resources>
-  <include location="recursos/image.qrc"/>
+  <include location="recursos/images.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>btnUsuarios</sender>
+   <signal>clicked()</signal>
+   <receiver>mdiArea</receiver>
+   <slot>showFullScreen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>100</x>
+     <y>60</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>525</x>
+     <y>285</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnEmpleados</sender>
+   <signal>clicked()</signal>
+   <receiver>mdiArea</receiver>
+   <slot>showFullScreen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>100</x>
+     <y>125</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>525</x>
+     <y>285</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

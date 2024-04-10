@@ -49,7 +49,7 @@
    </property>
    <layout class="QVBoxLayout" name="tablaEditable">
     <item alignment="Qt::AlignLeft|Qt::AlignTop">
-     <widget class="QLabel" name="lblCed">
+     <widget class="QLabel" name="lblCedula">
       <property name="styleSheet">
        <string notr="true">QLabel{	
 color:rgb(255,255,254);
@@ -174,34 +174,23 @@ background-color: rgb(170, 85, 0);;
      <widget class="QLineEdit" name="txtApellidos">
       <property name="styleSheet">
        <string notr="true">QLineEdit{
-/*background-color:rgba(0,0,0);
 border-radius:10px;
 font:12pt&quot;Arial&quot;;
 color:rgb(255,255,254);
-border:2px solid rgb(255,255,255);*/
-border-radius:10px;
-font:12pt&quot;Arial&quot;;
-color:rgb(255,255,254);
-
+background-color: rgb(139, 69, 0);
 
 }
 
 QLineEdit:hover{
-/*background-color:rgba(0,0,0);
-background-color: :rgba(12,12,12);
 border-radius:10px;
 font:12pt&quot;Arial&quot;;
-border:2px solid rgb(120,0,171);*/
 
-border-radius:10px;
-font:12pt&quot;Arial&quot;;
-/*color: rgb(255,255,255);*/
 border:2px solid rgb(120,0,171);
-  background-color: rgb(170, 85, 0);
+ background-color: rgb(139, 69, 0);
 }
 
 QLineEdit:focus{
-background-color:rgba(0,0,0);
+background-color: rgb(139, 69, 0);
 border-radius:10px;
 font:12pt&quot;Arial&quot;;
 border:2px solid rgb(120,0,171);
@@ -559,7 +548,7 @@ border:2px solid rgb(120,0,171);
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
-     <widget class="QPushButton" name="btnAgregar">
+     <widget class="QPushButton" name="btnGuardar">
       <property name="styleSheet">
        <string notr="true">QPushButton{
 border-radius:10px;
@@ -576,7 +565,7 @@ border:2px solid rgb(120,0,171);
 }</string>
       </property>
       <property name="text">
-       <string>Agregar</string>
+       <string>Guardar</string>
       </property>
      </widget>
     </item>
@@ -606,7 +595,7 @@ border:2px solid rgb(120,0,171);
   </widget>
  </widget>
  <resources>
-  <include location="recursos/image.qrc"/>
+  <include location="recursos/images.qrc"/>
  </resources>
  <connections/>
 </ui>

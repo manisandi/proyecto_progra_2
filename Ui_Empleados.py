@@ -28,14 +28,14 @@ class Ui_Empleados(object):
         self.tablaEditable = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.tablaEditable.setContentsMargins(0, 0, 0, 0)
         self.tablaEditable.setObjectName("tablaEditable")
-        self.lblCed = QtWidgets.QLabel(self.verticalLayoutWidget)
-        self.lblCed.setStyleSheet("QLabel{    \n"
+        self.lblCedula = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.lblCedula.setStyleSheet("QLabel{    \n"
 "color:rgb(255,255,254);\n"
 "font: 12pt\"Arial\";\n"
 "background-color: rgb(170, 85, 0);;\n"
 "}")
-        self.lblCed.setObjectName("lblCed")
-        self.tablaEditable.addWidget(self.lblCed, 0, QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.lblCedula.setObjectName("lblCedula")
+        self.tablaEditable.addWidget(self.lblCedula, 0, QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.txtCed = QtWidgets.QLineEdit(self.verticalLayoutWidget)
         self.txtCed.setStyleSheet("QLineEdit{\n"
 "/*background-color:rgba(0,0,0);\n"
@@ -128,34 +128,23 @@ class Ui_Empleados(object):
         self.tablaEditable.addWidget(self.lblApellidos, 0, QtCore.Qt.AlignLeft)
         self.txtApellidos = QtWidgets.QLineEdit(self.verticalLayoutWidget)
         self.txtApellidos.setStyleSheet("QLineEdit{\n"
-"/*background-color:rgba(0,0,0);\n"
 "border-radius:10px;\n"
 "font:12pt\"Arial\";\n"
 "color:rgb(255,255,254);\n"
-"border:2px solid rgb(255,255,255);*/\n"
-"border-radius:10px;\n"
-"font:12pt\"Arial\";\n"
-"color:rgb(255,255,254);\n"
-"\n"
+"background-color: rgb(139, 69, 0);\n"
 "\n"
 "}\n"
 "\n"
 "QLineEdit:hover{\n"
-"/*background-color:rgba(0,0,0);\n"
-"background-color: :rgba(12,12,12);\n"
 "border-radius:10px;\n"
 "font:12pt\"Arial\";\n"
-"border:2px solid rgb(120,0,171);*/\n"
 "\n"
-"border-radius:10px;\n"
-"font:12pt\"Arial\";\n"
-"/*color: rgb(255,255,255);*/\n"
 "border:2px solid rgb(120,0,171);\n"
-"  background-color: rgb(170, 85, 0);\n"
+" background-color: rgb(139, 69, 0);\n"
 "}\n"
 "\n"
 "QLineEdit:focus{\n"
-"background-color:rgba(0,0,0);\n"
+"background-color: rgb(139, 69, 0);\n"
 "border-radius:10px;\n"
 "font:12pt\"Arial\";\n"
 "border:2px solid rgb(120,0,171);\n"
@@ -435,8 +424,8 @@ class Ui_Empleados(object):
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_3)
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
-        self.btnAgregar = QtWidgets.QPushButton(self.verticalLayoutWidget_3)
-        self.btnAgregar.setStyleSheet("QPushButton{\n"
+        self.btnGuardar = QtWidgets.QPushButton(self.verticalLayoutWidget_3)
+        self.btnGuardar.setStyleSheet("QPushButton{\n"
 "border-radius:10px;\n"
 "font:12pt\"Arial\";\n"
 "color:rgb(255,255,254);\n"
@@ -449,8 +438,8 @@ class Ui_Empleados(object):
 "border:2px solid rgb(120,0,171);\n"
 "  background-color: rgb(170, 85, 0);\n"
 "}")
-        self.btnAgregar.setObjectName("btnAgregar")
-        self.verticalLayout_3.addWidget(self.btnAgregar)
+        self.btnGuardar.setObjectName("btnGuardar")
+        self.verticalLayout_3.addWidget(self.btnGuardar)
         self.btnEditar = QtWidgets.QPushButton(self.verticalLayoutWidget_3)
         self.btnEditar.setStyleSheet("QPushButton{\n"
 "border-radius:10px;\n"
@@ -474,7 +463,7 @@ class Ui_Empleados(object):
     def retranslateUi(self, Empleados):
         _translate = QtCore.QCoreApplication.translate
         Empleados.setWindowTitle(_translate("Empleados", "Form"))
-        self.lblCed.setText(_translate("Empleados", "Cedula"))
+        self.lblCedula.setText(_translate("Empleados", "Cedula"))
         self.lblNombre.setText(_translate("Empleados", "Nombre"))
         self.lblApellidos.setText(_translate("Empleados", "Apellidos"))
         self.lblTelefono.setText(_translate("Empleados", "Telefono"))
@@ -484,6 +473,6 @@ class Ui_Empleados(object):
         self.lblJefatura.setText(_translate("Empleados", "Jefatura SI // NO"))
         self.btnEliminar.setText(_translate("Empleados", "Eliminar"))
         self.btnCancelar.setText(_translate("Empleados", "Cancelar"))
-        self.btnAgregar.setText(_translate("Empleados", "Agregar"))
+        self.btnGuardar.setText(_translate("Empleados", "Guardar"))
         self.btnEditar.setText(_translate("Empleados", "Editar"))
-import image_rc
+import images_rc

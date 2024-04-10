@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>424</width>
-    <height>348</height>
+    <width>396</width>
+    <height>461</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -149,7 +149,7 @@ border:2px solid rgb(120,0,171);
            </spacer>
           </item>
           <item>
-           <widget class="QLabel" name="label">
+           <widget class="QLabel" name="iniciarApp">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -161,6 +161,9 @@ border:2px solid rgb(120,0,171);
               <width>16777215</width>
               <height>50</height>
              </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Iniciar Aplicacion</string>
@@ -184,7 +187,7 @@ border:2px solid rgb(120,0,171);
            </spacer>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit">
+           <widget class="QLineEdit" name="usuario">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -222,7 +225,7 @@ border:2px solid rgb(120,0,171);
            </spacer>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_2">
+           <widget class="QLineEdit" name="contrasenia">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -260,39 +263,7 @@ border:2px solid rgb(120,0,171);
            </spacer>
           </item>
           <item>
-           <widget class="QCheckBox" name="checkBox">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>35</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>35</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>Recordar Contraseña</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="verticalSpacer_6">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>40</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="iniciarSesion">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -323,6 +294,19 @@ border:2px solid rgb(120,0,171);
             </property>
            </spacer>
           </item>
+          <item>
+           <widget class="QPushButton" name="salir">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Salir</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
        </item>
@@ -346,7 +330,40 @@ border:2px solid rgb(120,0,171);
   </widget>
  </widget>
  <resources>
-  <include location="recursos/image.qrc"/>
+  <include location="recursos/images.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>iniciarSesion</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>342</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>197</x>
+     <y>230</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>salir</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>lower()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>422</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>197</x>
+     <y>230</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
